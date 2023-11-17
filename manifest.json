@@ -10,9 +10,9 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "chatgpt_logo.png",
-      "48": "chatgpt_logo.png",
-      "128": "chatgpt_logo.png"
+      "16": "summaraize.png",
+      "48": "summaraize.png",
+      "128": "summaraize.png"
     }
   },
   "background": {
@@ -22,8 +22,8 @@
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
   "icons": {
-    "16": "chatgpt_logo.png",
-    "48": "chatgpt_logo.png",
-    "128": "chatgpt_logo.png"
+    "16": "summaraize.png",
+    "48": "summaraize.png",
+    "128": "summaraize.png"
   }
 }
