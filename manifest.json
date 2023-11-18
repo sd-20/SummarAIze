@@ -8,22 +8,22 @@
     "scripting"
   ],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup.html",
     "default_icon": {
-      "16": "summaraize.png",
-      "48": "summaraize.png",
-      "128": "summaraize.png"
+      "16": "images/summaraize.png",
+      "48": "images/summaraize.png",
+      "128": "images/summaraize.png"
     }
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/background.js"
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
   "icons": {
-    "16": "summaraize.png",
-    "48": "summaraize.png",
-    "128": "summaraize.png"
+    "16": "images/summaraize.png",
+    "48": "images/summaraize.png",
+    "128": "images/summaraize.png"
   }
 }
