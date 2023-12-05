@@ -5,7 +5,8 @@
   "description": "A Chrome extension that enables questions about a pages content via the OpenAI API.",
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "https://api.openai.com/*"
   ],
   "action": {
     "default_popup": "src/popup.html",
