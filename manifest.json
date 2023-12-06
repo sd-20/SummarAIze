@@ -4,7 +4,10 @@
   "version": "1.0",
   "description": "A Chrome extension that enables questions about a pages content via the OpenAI API.",
   "host_permissions": [
-    "https://api.openai.com/*"
+    "https://api.openai.com/*",
+    "http://localhost/*",
+    "http://localhost:5000/",
+    "https://api.com/*"
   ],
   "permissions": [
     "activeTab",
