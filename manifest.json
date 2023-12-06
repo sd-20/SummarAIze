@@ -3,13 +3,15 @@
   "name": "SummarAIze",
   "version": "1.0",
   "description": "A Chrome extension that enables questions about a pages content via the OpenAI API.",
-  "permissions": [
-    "activeTab",
-    "scripting",
+  "host_permissions": [
     "https://api.openai.com/*"
   ],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
   "action": {
-    "default_popup": "src/popup.html",
+    "default_popup": "src/frontend/popup.html",
     "default_icon": {
       "16": "images/summaraize.png",
       "48": "images/summaraize.png",
