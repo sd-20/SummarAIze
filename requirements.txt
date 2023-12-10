@@ -1,2 +1,6 @@
 Flask
 beautifulsoup4
+openai
+nltk
+scikit-learn
+pandas
