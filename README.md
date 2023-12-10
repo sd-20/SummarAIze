@@ -11,4 +11,4 @@ Final Project for CS 410: Text Information Systems.
 
 ### BACKEND
 1. Add OpenAI API key
-2. Run python src/backend/app.py
+2. Run ```python src/backend/app.py```
