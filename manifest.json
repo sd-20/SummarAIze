@@ -21,9 +21,6 @@
       "128": "images/summaraize.png"
     }
   },
-  "background": {
-    "service_worker": "src/frontend/background.js"
-  },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
