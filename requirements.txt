@@ -4,3 +4,5 @@ openai
 nltk
 scikit-learn
 pandas
+requests
+flask_cors

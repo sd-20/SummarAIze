@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
   integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <head>
-    <title>SummarAIze</title>
-    <link rel="stylesheet" type="text/css" href="popup.css">
-  </head>
-  <body>
-    <h1>SummarAIze</h1>
-      <div class="form-group">
-        <h2><small>Summary</small></h2>
-        <p> Dummy summary text goes here </p>
-      </div> 
-      <div class="form-group">
-        <textarea id="userInput" class="form-control" rows="3" placeholder="Enter question here"></textarea>
-      </div>
-    <button id="submitButton" type="button" class="btn btn-primary">Submit</button>
-    <div id="response"></div>
-    <script src="popup.js"></script>
-  </body>
+
+<head>
+  <title>SummarAIze</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+
+<body>
+  <h1>SummarAIze</h1>
+  <div class="form-group">
+    <h2><small>Summary</small></h2>
+    <div class="loader"></div>
+    <div id="summary"></div>
+    <div id="chat"></div>
+  </div>
+  <div class="form-group">
+    <textarea id="userInput" class="form-control" rows="3" placeholder="Enter question here"></textarea>
+  </div>
+  <button id="submitButton" type="button" class="btn btn-primary">Submit</button>
+  <script src="popup.js"></script>
+</body>
+
 </html>
