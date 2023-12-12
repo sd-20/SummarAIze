@@ -15,7 +15,8 @@ nltk.download("punkt")
 nltk.download("stopwords")
 
 
-### Cited source: https://pytutorial.com/how-to-get-text-method-beautifulsoup/, Author: Alexander Williams
+### Cited source: https://pytutorial.com/how-to-get-text-method-beautifulsoup/
+### Author: Alexander Williams
 def get_text(url, timeout=10):
     """
     Retrieves and extracts text from a webpage.
@@ -58,7 +59,7 @@ def extract_important_words(text, top_n=100):
         {"frequency": word_counts, "tfidf": tfidf_scores}
     ).fillna(0)
     combined_scores = combined_scores.assign(
-        combined_score=combined_scores["frequency"] * combined_scores["tfidf"]
+        combined_score=combined_scores.get("frequency") * combined_scores.get("tfidf")
     )
     top_words = combined_scores.sort_values(by="combined_score", ascending=False).head(
         top_n
