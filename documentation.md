@@ -34,7 +34,7 @@ FRONTEND
 10. Access Chrome Extension via SummarAIze icon
 11. Open a new webpage then test it out 
 
-**4) Brief description of contribution of each team member in case of a multi-person team. **
+**4) Brief description of contribution of each team member in case of a multi-person team.**
 
 Sam - worked on the frontend, backend, and progress report. This involved helping implement the algorithm for the top 50 tokens and building the chat interface in the front end. We also all worked on the progress report. 
 
