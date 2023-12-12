@@ -23,7 +23,7 @@ def get_text(url):
         return ""
 
 
-def extract_important_words(text, top_n=50):
+def extract_important_words(text, top_n=100):
     words = word_tokenize(text)
     filtered_words = [
         word for word in words if word.lower() not in stopwords.words("english")
