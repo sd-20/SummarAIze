@@ -1,8 +1,9 @@
+"""Flask application for summarizing webpages and responding to user queries."""
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from openai import OpenAI
-import os
-from scrapeWebpage import get_text
+from scrape_webpage import get_text
 
 app = Flask(__name__)
 
@@ -13,12 +14,14 @@ SUMMARY_QUERY = "summarize a page with these words: "
 
 @app.route("/")
 def hello_world():
+    """Endpoint to test the server."""
     print("Testing")
     return "<p>Hello, World!</p>"
 
 
 @app.route("/summary", methods=["POST"])
 def summary():
+    """Endpoint to handle summarization requests."""
     try:
         data = request.json
         url = data.get("url")
@@ -39,13 +42,19 @@ def summary():
             response = completion.choices[0].message
             print(f"GPT 3.5 Response {response.content}")
             return jsonify({"summary": response.content})
-    except Exception as e:
-        print(e)
-        return jsonify({"error": str(e)})
+    except ValueError as err:
+        print("Error processing the request:", err)
+        return jsonify({"error": str(err)})
+    except KeyError as err:
+        print("Key error:", err)
+        return jsonify({"error": str(err)})
+
+    return jsonify({"error": "unknown"})
 
 
 @app.route("/submit", methods=["POST"])
 def submit():
+    """Endpoint to handle user query submissions."""
     try:
         data = request.json
         user_input = data["data"]
@@ -58,10 +67,13 @@ def submit():
         )
         result2 = completion.choices[0].message
         print(result2)
-        return jsonify({"summary": result2.content})
-    except Exception as e:
-        print(e)
-        return jsonify({"error": str(e)})
+        return jsonify({"response": result2.content})
+    except ValueError as err:
+        print("Error processing the request:", err)
+        return jsonify({"error": str(err)})
+    except KeyError as err:
+        print("Key error:", err)
+        return jsonify({"error": str(err)})
 
 
 if __name__ == "__main__":
