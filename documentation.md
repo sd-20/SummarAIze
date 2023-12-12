@@ -42,7 +42,7 @@ Andrea - worked on the frontend, backend, and progress report. This involved hel
 
 Alan - worked on the backend of the project helping with the information extraction and parsing, algorithm for the top 50 tokens, and openAI API calls. We also all worked on the progress report. 
 
-Jalen - worked on the backend of the project helping with the information extraction and parsing, algorithm for the top 50 tokens, and openAI API calls. We also all worked on the progress report. 
+Jalen - worked on the backend of the project helping with the information extraction and parsing, algorithm for the top 50 tokens, and openAI API calls. Wrote the documentation. We also all worked on the progress report. 
  
 
 
