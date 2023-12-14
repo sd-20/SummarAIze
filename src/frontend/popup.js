@@ -30,26 +30,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // append question to chat 
 function appendQuestion(message) {
-  var newMessageDiv = document.createElement('div');
-  newMessageDiv.classList.add('questionDiv');
+  var questionDiv = document.createElement('div');
+  questionDiv.classList.add('questionDiv');
+  var responseDiv = document.createElement('div')
+  responseDiv.classList.add("responseDiv")
   var chatDiv = document.getElementById('chat');
-  newMessageDiv.innerText = message;
-  chatDiv.appendChild(newMessageDiv);
+  questionDiv.innerText = message;
+  chatDiv.appendChild(questionDiv);
+  chatDiv.append(responseDiv)
+  return responseDiv
 }
 
 // append response to chat  
-function appendResponse(message) {
-  var newMessageDiv = document.createElement('div');
-  newMessageDiv.classList.add('responseDiv');
-  var chatDiv = document.getElementById('chat');
-  newMessageDiv.innerText = message;
-  chatDiv.appendChild(newMessageDiv);
+function appendResponseMessage(message, responseDiv, loadingDiv) {
+  responseDiv.removeChild(loadingDiv)
+  responseDiv.innerText = message;
+}
+
+function appendResponseLoader(responseDiv) {
+  var loadingDiv = document.createElement('div');
+  loadingDiv.classList.add("loader")
+  responseDiv.appendChild(loadingDiv)
+  return loadingDiv
 }
 
 ERROR_MESSAGE = "Error: failed to fetch response"
 function handleSubmit() {
   let userInput = document.getElementById('userInput').value;
-
+  let responseDiv = appendQuestion(userInput)
+  let loadingDiv = appendResponseLoader(responseDiv)
   console.log(userInput);
 
   fetch('http://127.0.0.1:5000/submit', {
@@ -66,8 +75,7 @@ function handleSubmit() {
     .then(data => {
       console.log(data)
       document.getElementById('userInput').value = '';
-      appendQuestion(userInput)
-      appendResponse(data.response)
+      appendResponseMessage(data.response, responseDiv, loadingDiv)
       console.log(data);
     })
     .catch(error => {
