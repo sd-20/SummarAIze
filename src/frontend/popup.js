@@ -59,7 +59,7 @@ function handleSubmit() {
   let userInput = document.getElementById('userInput').value;
   let responseDiv = appendQuestion(userInput)
   let loadingDiv = appendResponseLoader(responseDiv)
-  console.log(userInput);
+  document.getElementById('userInput').value = '';
 
   fetch('http://127.0.0.1:5000/submit', {
     method: 'POST',
@@ -74,13 +74,11 @@ function handleSubmit() {
     })
     .then(data => {
       console.log(data)
-      document.getElementById('userInput').value = '';
       appendResponseMessage(data.response, responseDiv, loadingDiv)
-      console.log(data);
     })
     .catch(error => {
       console.error('Error:', error)
-      appendQuestion(ERROR_MESSAGE + error)
+      appendResponseMessage(ERROR_MESSAGE + error)
     });
 };
 
