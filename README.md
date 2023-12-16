@@ -5,7 +5,7 @@ Final Project for CS 410: Text Information Systems.
 
 [Documentation](https://github.com/sd-20/SummarAIze/blob/main/documentation.md)
 
-[Presentation](https://mediaspace.illinois.edu/media/t/1_ecdzi6he)
+[Presentation](https://mediaspace.illinois.edu/media/t/1_vn6h3auf)
 
 ## Getting Started
 
