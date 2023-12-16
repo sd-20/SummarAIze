@@ -1,6 +1,8 @@
 # SummarAIze
 Final Project for CS 410: Text Information Systems.
 
+[Project Proposal](https://github.com/sd-20/SummarAIze/blob/main/docs/proposal.md)
+
 [Documentation](https://github.com/sd-20/SummarAIze/blob/main/documentation.md)
 
 ## Getting Started
