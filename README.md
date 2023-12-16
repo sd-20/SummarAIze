@@ -16,5 +16,6 @@ Final Project for CS 410: Text Information Systems.
 4. Access Chrome Extension via SummarAIze icon 
 
 ### BACKEND
-1. [Add](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key) OpenAI API key 
+1. [Add](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key) OpenAI API key in the src/backend/app.py where: client = OpenAI(api_key='YOUR-KEY') on line 11
+
 2. Run ```python src/backend/app.py```
